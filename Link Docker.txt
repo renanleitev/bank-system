@@ -1,0 +1,5 @@
+Link do DockerHub: https://hub.docker.com/r/renanleitev/bank
+
+Para baixar a imagem: docker pull renanleitev/bank:1.0
+
+Acessar no navegador: http://127.0.0.1:8000
