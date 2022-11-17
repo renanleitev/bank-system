@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+{% block bodycontent %}    
+    <div class="container text-center" style="margin-top: 60px; margin-bottom: 20px;">
+        <h1>Bem vindo ao Trybe Bank</h1>
+    </div>
+    <div class="container">
+        <a href="{% url 'accounts:signup' %}"><button class="btn btn-primary btn-block" id="acc"><i class="fa fa-user"></i>Criar nova conta</button></a>
+        <div style="margin-top: 10px;"></div>
+        <a href="{% url 'accounts:signin' %}"><button class="btn btn-danger btn-block" id="sign_in"><i class="fa fa-sign-in"></i> Sign in</button></a>
+    </div>
+    
+    <br>
+{% endblock %}

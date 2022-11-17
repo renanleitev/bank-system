@@ -1,0 +1,18 @@
+{% extends 'profiles/profile_base_layout.html' %}
+
+{% block bodycontent %}
+
+    <section id="welcome_post" class="col-9" style="margin-top: 60px;">
+        <h2>Bem-vindo, <span id="prof_name">{{ user }}.</span> </h2>
+        <h4 style="font-weight: 300;">É bom ter você por aqui.</h4>   
+        <div class="text-center curr_bal"> 
+            <h4>NÚMERO DA CONTA</h4> 
+            <h1 id="curr_bal" class="btn-success">{{ curr_user.account_number }}</h1>
+        </div>
+        <div class="text-center curr_bal"> 
+            <h4>SALDO ATUAL</h4> 
+            <h1 id="curr_bal" class="btn-danger">R${{ curr_user.balance }}</h1> 
+        </div>
+    </section>
+
+{% endblock %}

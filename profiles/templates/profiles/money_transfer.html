@@ -1,0 +1,22 @@
+{% extends 'profiles/profile_base_layout.html' %}
+{% block bodycontent %}
+    <section id="welcome_post" class="col-9" style="margin-top: 60px;">
+        <h2>Bem-vindo, <span id="prof_name">{{ user }}.</span> </h2> 
+        <form action="{ url 'profiles:money_transfer' }" method="post">
+            {% csrf_token %}
+            <h3 style="font-weight: 300;">
+                {{ form }}
+            </h3>
+            <button type="submit" class="btn btn-danger">Transferir dinheiro</button>
+        </form>
+    </section>
+{% endblock %}
+{% block scriptcontent %}
+    <script>
+        $(".current").removeClass("current");
+        $("#transfer").addClass("current");
+
+        $("input").addClass("form-control");
+        $("label").prepend("<br>")
+    </script>
+{% endblock %}

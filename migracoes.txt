@@ -1,0 +1,3 @@
+1 - deletar o banco de dados
+2 - py -u manage.py makemigrations profiles
+3 - py -u manage.py migrate                   

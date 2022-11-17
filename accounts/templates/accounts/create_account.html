@@ -1,0 +1,31 @@
+{% extends 'base_layout.html' %}
+  
+{% block bodycontent %}        
+    <h2 class="container text-center" style="margin-top: 60px;">Criar nova conta</h2>
+    <h6 class="text-center"><em>(Todos os campos são obrigatórios)</em></h6>
+    <form class="container" action="/accounts/register/" method="post">
+        {% csrf_token %}
+        <section class="form-control">
+            <h4>Preencha os seus dados</h4>
+            {{ form }}
+        </section>
+        <input type="submit" class="form-control btn btn-danger" value="Criar conta" name="submit"/>
+    </form>
+{% endblock %}
+
+{% block scriptcontent %}
+    <script>
+        $(".active").removeClass("active");
+        $("#nav-create").addClass("active");
+
+        $(".helptext").html("");
+
+        var input_text = $("input[type=text]");
+        input_text.addClass("form-control");
+
+        var input_pass = $("input[type=password]");
+        input_pass.addClass("form-control");
+
+        $("form ul li").addClass("btn btn-danger");
+    </script>
+{% endblock %}

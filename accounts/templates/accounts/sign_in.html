@@ -1,0 +1,25 @@
+{% extends 'base_layout.html' %}
+{% block bodycontent%}
+    <div class="container bg-info" style="margin-top: 60px;"> 
+        <form class="form-control" action="/accounts/login/" method="post">
+            {% csrf_token %}
+            <h2>Preencha os campos abaixo para fazer login</h2>
+            {{ form }}
+            <button type="submit" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px;">
+                <i class="fa fa-sign-in"></i>
+                Login
+            </button>
+            <small class="row">
+                <a href="#" class="col text-left">Esqueceu a sua senha?</a>
+                <a href="{% url 'accounts:signup' %}" class="col text-right">Criar nova conta</a>
+            </small>
+        </form>
+    </div>
+{% endblock %}
+{% block scriptcontent %}
+    <script>
+        $(".active").removeClass("active");
+        $("#nav-login").addClass("active");
+        $("input").addClass("form-control");
+    </script>
+{% endblock %}

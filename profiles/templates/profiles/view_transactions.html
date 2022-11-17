@@ -1,0 +1,9 @@
+
+{% extends 'profiles/profile_base_layout.html' %}
+{% load render_table from django_tables2 %}
+{% block bodycontent %}
+    <h1 style="margin-top: 60px; padding: 10px;">Histórico de Transações</h1>
+    <div style="position: absolute; margin-top: 15vh; margin-left: 25vw;">
+        {% render_table table %}
+    </div>
+{% endblock %}
