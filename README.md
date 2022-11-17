@@ -1,6 +1,8 @@
 # Trybe Bank
 Este é um projeto Web Banking que eu criei como parte de uma etapa do processo seletivo da Trybe.
 
+Link do repositório: https://github.com/renanleitev/bank-system
+
 ## Features
 <li> É possível criar uma nova conta e obter um número único de conta ao fazer o sign-in.
 <li> Os dados dos usuários são armazenados em um banco de dados (PostgreSQL). 
