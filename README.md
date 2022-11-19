@@ -32,8 +32,7 @@ Para acessar a página de Administrador (dentro do servidor local do Django que 
 ## Pré-requisitos
 1. Um terminal ou CMD (prompt de comando).
 2. PostgreSQL instalado. Mais informações: https://www.guru99.com/download-install-postgresql.html 
-   1. Primeiro, é necessário criar o banco de dados do PostgreSQL:
-   Obs: Se utilizar algum valor diferente, é preciso alterar o arquivo CentralBank/settings.py
+   1. Primeiro, é necessário criar o banco de dados do PostgreSQL (Se utilizar algum valor diferente, é preciso alterar o arquivo CentralBank/settings.py):
       1. Nome da base de dados: 'postgres',
       2. Usuário (padrão do PostgreSQL): 'postgres',
       3. Senha: 'postgres',
