@@ -33,6 +33,7 @@ Para acessar a página de Administrador (dentro do servidor local do Django que 
 1. Um terminal ou CMD (prompt de comando).
 2. PostgreSQL instalado. Mais informações: https://www.guru99.com/download-install-postgresql.html 
    1. Primeiro, é necessário criar o banco de dados do PostgreSQL:
+   Obs: Se utilizar algum valor diferente, é preciso alterar o arquivo CentralBank/settings.py
       1. Nome da base de dados: 'postgres',
       2. Usuário (padrão do PostgreSQL): 'postgres',
       3. Senha: 'postgres',
@@ -70,6 +71,13 @@ Para acessar a página de Administrador (dentro do servidor local do Django que 
     2. sqlparse==0.4.3
     ```
     pip install sqlparse
+    ```
+9. Fazer a migração da base de dados:
+    ```
+    python manage.py makemigrations
+    ```
+    ```
+    python manage.py migrate
     ```
 ## Iniciando o servidor
 1. Abra o terminal e entre na pasta principal do projeto.
